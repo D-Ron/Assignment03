@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <title> Assignment 3 part 2.3 - Death by Javascript</title>
+    <script type ="text/javascript">
+       
+
+        
+        
+        
+        
+/*  -----    -----     -----     -----     ----- 
+// Task 1 Alphasort a word       
+        
+
+        var word = window.prompt("Please enter a word: ");
+        
+            var wordArray = [];
+            for (i = 0; i < word.length; i++) {                    
+                wordArray.push(word[i]);
+            }
+        
+            wordArray.sort();
+            window.console.log(wordArray);
+ ----- */          
+     
+        
+   
+/*  -----    -----     -----     -----     -----          
+// Task 2 Capitalizes the first letter of each word    
+    
+        var testSentence = "steve tyler sang dude look like a lady";
+        var testSentenceSplit = testSentence.split(" ");
+        var testSentenceRedux = [];  
+        
+            window.console.log(testSentenceSplit); 
+        
+        function letterCap(x){
+        for (i = 0; i < testSentenceSplit.length; i++) {  
+          
+            testSentenceRedux.push(testSentenceSplit[i] [0].toUpperCase() + testSentenceSplit[i].slice(1)); 
+        
+        }
+        }
+         letterCap(testSentenceSplit);
+        window.console.log(testSentenceRedux.join(" "));
+       
+----- */   
+        
+        
+/*  -----    -----     -----     -----     -----    
+// Task 3 Sample Data and Output   Lecture 3 slide 27, 29, 30 
+        
+    var testSentence = prompt("Please write a sentence to find out how many vowels are in it.");    
+        var totalVowels = testSentence.match(/[aeiou]/gi);
+        window.console.log(testSentence);
+        window.console.log("Total number of vowels are " + totalVowels.length + ".");
+        
+----- */        
+        
+        
+        
+        
+/*  -----    -----     -----     -----     -----    
+// Task 4 generate a string of random letters and numbers for an 8 character code.   
+        
+// This sets up the array
+var alpha1 = ["a", "b", "c", "d","e" , "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var alpha2 = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", 0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// combines the array
+var fullAlphaNumeric = [alpha1, alpha2];
+var randomPassCode = [];
+
+// loop to generate characters
+for (i = 0; i < 8; i++) {
+		randomPassCode[i] = fullAlphaNumeric[Math.floor(Math.random() * 2)] [Math.floor(Math.random() * 36)]; 
+};
+	window.console.log(randomPassCode.join(""));
+----- */      
+       
+
+        
+/*  -----     
+// Task 5 accept a list of country names and reveal the longest result    
+   
+        var countryNameArray = [];
+       		countryNameArray[0] = prompt("Pick 5 countries. Country number 1?"); // "Asia";
+        	countryNameArray[1] = prompt("Pick 5 countries. Country number 2?");// "Japan";
+        	countryNameArray[2] = prompt("Pick 5 countries. Country number 3?");// "Australia";
+        	countryNameArray[3] = prompt("Pick 5 countries. Country number 4?");// "Canada";        
+			countryNameArray[4] = prompt("Pick 5 countries. Country number 5?");
+			
+		var characterLength = 0;
+		var longestCountryName;
+		
+		for (i = 0; i < countryNameArray.length; i++) {
+		if (countryNameArray[i].length > characterLength) {
+        	characterLength = countryNameArray[i].length; 
+        	longestCountryName = countryNameArray[i]; 
+        }
+        }     
+		
+		
+		window.console.log(countryNameArray);
+		window.console.log("The country with the longest name in this collection is - " + longestCountryName);
+ ----- */      
+  
+        
+// End Assignment 3 part 2
+        
+        
+    </script>
+                    
+</head>
+<body>
+    <h1>Assignment 3 part 2.3 - Death by Javascript</h1>
+    <p></p> 
+    <script type ="text/javascript"></script>
+    
+    
+                
+</body>        
+</html>

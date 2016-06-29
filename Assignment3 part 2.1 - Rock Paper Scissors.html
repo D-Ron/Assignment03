@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <title> Assignment 3 part 2.1</title>
+  
+</head>
+<body>
+    <h1>Assignment 3 part 2.1 - Rock, Paper, Scissors Game</h1>
+    <p></p> 
+    
+    
+</body>  
+
+    <script type ="text/javascript">
+        
+/*      Rock Paper Scissors Game       
+
+    var userChoice;
+    var userChoiceL;        
+    var computerChoice;        
+        
+    userChoice = prompt("Pick Rock, Paper or Scissors");
+    userChoiceL = userChoice.toLowerCase(); 
+   
+   var gameArray = ["rock", "paper", "scissors"];
+   var randomNumber = Math.floor(Math.random()  * 3); 
+    computerChoice = gameArray[randomNumber];  
+
+
+        
+// code for invalid response        
+	if  (userChoiceL != "rock" && userChoiceL != "paper" && userChoiceL != "scissors") {	
+		userChoice = alert ("Please enter a valid response: Rock Paper or Scissors?");
+        userChoice = prompt ("Please pick rock, paper or scissors"); // For some reason the game completely stops when it reaches this point, can't reset to top.
+        userChoiceL = userChoice.toLowerCase(); 
+	}   	
+        
+        
+ // code for tie response        
+    else if  (userChoiceL === computerChoice) {		
+		userChoice = alert ("You and the computer ended in a TIE. Please try again.");         
+        userChoice = prompt ("Please pick rock, paper or scissors"); // Same as in situation for invalid response. For some reason the game completely stops when it reaches this point, can't get the game to run after this prompt is entered .  
+        userChoiceL = userChoice.toLowerCase(); 
+    }
+
+ // parameters for Rock
+ // rock is greater than scissors
+ 	 else if (userChoiceL == gameArray[0] && computerChoice == gameArray[2]) {
+ 		alert ("You chose " + userChoice + ". The computer picked " + gameArray[2] + ". You Win!");
+ 	}
+ // rock is less than paper 	
+ 	else if   (userChoiceL == gameArray[0] && computerChoice == gameArray[1]) {
+ 		alert("You chose " + userChoice + ". The computer picked " + gameArray[1] + ". I'm sorry you lose!"); 
+ 	} 	
+
+        
+ // parameters for Paper
+ // paper is greater than rock
+ 	else if  (userChoiceL == gameArray[1] && computerChoice == gameArray[0]) {
+ 		alert ("You chose " + userChoice + ". The computer picked " + gameArray[0] + ". You Win!"); 		
+ 	}
+ // paper is less than scissors 	
+ 	else if  (userChoiceL == gameArray[1] && computerChoice == gameArray[2]) { 
+ 		alert("You chose " + userChoice + ". The computer picked " + gameArray[2] + ". I'm sorry you lose!"); 
+ 	} 	
+
+        
+ // parameters for Scissors
+ // scissors is greater than paper
+ 	else if  (userChoiceL == gameArray[2] && computerChoice == gameArray[1]) {
+ 		alert ("You chose " + userChoice + ". The computer picked " + gameArray[1] + ". You Win!"); 		
+ 	}
+ // scissors is less than rock 	
+ 	else if  (userChoiceL == gameArray[2] && computerChoice == gameArray[0]) { 
+ 		alert("You chose " + userChoice + ". The computer picked " + gameArray[0] + ". I'm sorry you lose!"); 		
+ 	} 	
+  		
+	 else   {
+             alert("Thank you for playing. Have a nice day!")
+	};          
+
+*/
+
+
+// End Assignment 3 part 2.1 
+
+
+
+/* -----------------------------------------
+	Using this code to find out if the values that are being generated are consistent throughout the execution  
+  
+  		window.console.log("Index [0] This should be " + gameArray[0]);
+  		window.console.log("Index [1] This should be " + gameArray[1]);
+  		window.console.log("Index [2] This should be " + gameArray[2]);  
+   		window.console.log("User Choice = " + userChoice); 
+   		window.console.log("User Choice lower case = " + userChoiceL); 	        
+  		// window.console.log("Computer Choice = " + gameArray[randomNumber]);
+  		window.console.log("Random Number = " + randomNumber);
+   		window.console.log(x);
+----------------------------------------- */	
+  		
+
+        
+        
+
+        
+        
+    </script>      
+</html>

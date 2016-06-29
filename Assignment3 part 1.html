@@ -1,0 +1,434 @@
+<!doctype html>
+<html>
+<head>
+    <title>Assignment 03 part 1</title>
+    <script type ="text/javascript">
+        
+        /* ------------
+       // Task 1
+        var favMovie =["The Martian", "Inception", "Interstellar", "The Avengers", "The Matrix"];
+        window.console.log(favMovie[1]);
+        ------------ */
+ 
+        /* ------------      
+       // Task 2
+        var movies =[];
+        movies[0] = "Ironman";
+        movies[1] = "The Hangover";
+        movies[2] = "You don't mess with the Zohan";        
+        movies[3] = "Rocky Balboa";        
+        movies[4] = "Midnight Madness";    
+        window.console.log(movies[0]);
+       ------------ */
+        
+        
+        /* ------------              
+       // Task 3
+        var movies =[ "Ironman", "The Hangover", "You don't mess with the Zohan", "Rocky Balboa", "Midnight Madness"];  
+        movies.push("Mystery Men");
+        
+        window.console.log(movies);        
+        window.console.log(movies.length);
+       ------------ */ 
+
+        /* ------------                
+       // Task 4 use the delete operator
+        var movies = ["The Martian", "Inception", "Interstellar", "The Avengers", "The Matrix"];  
+        movies.shift();
+        
+        window.console.log(movies);        
+        window.console.log(movies.length);
+        ------------ */
+        
+        
+        /* ------------                          
+       // Task 5 for loop
+
+        var movies = [
+            "The Martian", 
+            "Inception", 
+            "Interstellar", 
+            "The Avengers", 
+            "The Matrix", 
+            "The Hangover", 
+            "Rocky Balboa"]; 
+        
+        for (i = 0; i < movies.length; i++) {     
+                window.console.log(movies[i]);  
+        }
+        ------------ */    
+        
+        /* ------------                                  
+       // Task 6 for in loop
+
+        var movies = [
+            "The Martian", 
+            "Inception", 
+            "Interstellar", 
+            "The Avengers", 
+            "The Matrix", 
+            "The Hangover", 
+            "Rocky Balboa"]; 
+        
+        for (var title in movies) {     
+                window.console.log(movies[title]);  
+        }
+        ------------ */ 
+        
+        
+        /* ------------                                                 
+       // Task 7 for in loop sorted
+
+        var movies = [
+            "Martian, The", 
+            "Inception", 
+            "Interstellar", 
+            "Avengers, The", 
+            "Matrix, The", 
+            "Hangover, The", 
+            "Rocky Balboa"]; 
+        
+        for (var title in movies) {     
+                window.console.log(movies.sort()[title]);  
+        }
+        ------------ */
+
+        
+        
+        
+        
+        
+        /* ------------                                                
+       // Task 8 for in loop - lecture 3 slide 75
+
+        var movies = [
+            "The Martian", 
+            "Inception", 
+            "Interstellar", 
+            "The Avengers", 
+            "The Matrix", 
+            "The Hangover", 
+            "Rocky Balboa"]; 
+                        
+        window.console.log("These are the movies I regret watching: ");
+        for (var title in movies) {     
+             
+                window.console.log(movies[title]);  
+        }
+
+
+        var leastFavMovies = [
+            "Wicker man", 
+            "Street Fighter (Jean Claude Van Damme)", 
+            "Battlefield Earth"]; 
+
+        window.console.log("These are my least favorite movies:" );        
+        for (var title in leastFavMovies) {     
+                window.console.log(leastFavMovies[title]);  
+        }
+        ------------ */
+        
+        
+        
+        
+        /* ------------                                                         
+       // Task 9 Concat both arrays and in reverse order
+
+        var movieFav = [
+            "Martian, The", 
+            "Inception", 
+            "Interstellar", 
+            "Avengers, The", 
+            "Matrix, The", 
+            "Hangover, The", 
+            "Rocky Balboa"]; 
+                        
+        var leastFavMovies = [
+            "Wicker man", 
+            "Street Fighter", 
+            "Battlefield Earth"]; 
+        var movies =  movieFav.concat(leastFavMovies);
+        //window.console.log(movies.sort().reverse());  
+        
+        for (var title in movies) {     
+                  
+            window.console.log(movies.sort().reverse()[title]);   
+        }
+
+        ------------ */  
+        
+        
+        
+        /* ------------     
+       // Task 10 return just the last item of the concatinated reverse sorted array
+
+          var movieFav = [
+            "Martian, The", 
+            "Inception", 
+            "Interstellar", 
+            "Avengers, The", 
+            "Matrix, The", 
+            "Hangover, The", 
+            "Rocky Balboa"]; 
+                        
+        var leastFavMovies = [
+            "Wicker man", 
+            "Street Fighter", 
+            "Battlefield Earth"]; 
+        var movies =  movieFav.concat(leastFavMovies);
+
+        var reversedArray = movies.sort().reverse(); 
+        window.console.log(reversedArray[reversedArray.length -1] );
+        ------------ */
+        
+        
+        /* ------------                 
+       // Task 11 return just the first item of the concatinated reverse sorted array
+
+        var movieFav = [
+            "Martian, The", 
+            "Inception", 
+            "Interstellar", 
+            "Avengers, The", 
+            "Matrix, The", 
+            "Hangover, The", 
+            "Rocky Balboa"]; 
+                        
+        var leastFavMovies = [
+            "Wicker man", 
+            "Street Fighter", 
+            "Battlefield Earth"]; 
+        var movies =  movieFav.concat(leastFavMovies);
+
+        var reversedArray = movies.sort().reverse(); 
+        window.console.log(reversedArray[0]); 
+            ------------ */  
+     
+
+        
+/* ------------                        
+// Task 12	Programmatically retrieve the movies in your array that you do not like and return their indices. 
+// Then, using those indices, programmatically add movies that you do like.        
+        
+        
+// Setup from Task 11        
+        var movieFav = [
+            "Martian", 
+            "Inception", 
+            "Interstellar", 
+            "Avengers", 
+            "Matrix", 
+            "Hangover", 
+            "Rocky Balboa"]; 
+                        
+        var leastFavMovies = [
+            "Wicker man", 
+            "Street Fighter", 
+            "Battlefield Earth"]; 
+        var movies =  movieFav.concat(leastFavMovies);
+        var reversedArray = movies.sort().reverse(); 
+        window.console.log(reversedArray);
+
+// Task 12 begins here - Code to remove the movies you don't like.          
+        reversedArray.splice(0, 3, "Last Dragon", "Pirates of the Caribbean", "Force Awakens");
+        window.console.log(reversedArray);
+        
+ ------------ */           
+        
+        
+
+
+        
+        /* ------------               
+       // Task 13 create an Associative array      
+        
+        var employee1 = [];
+        employee1 ["employeeid"] = "WorkerBee0001";
+        employee1 ["name"] = "Jason";
+        employee1 ["title"] = "Marketing Director";
+        employee1 ["department"] = "Marketing";
+        employee1 ["current"] = true;
+        
+        var employee2 = [];
+        employee2 ["employeeid"] = "WorkerBee0002";
+        employee2 ["name"] = "Cindy";
+        employee2 ["title"] = "Database Admin";
+        employee2 ["department"] = "I.T.";
+        employee2 ["current"] = true;
+
+        var employees = [employee1, employee2];
+        window.console.log(employees[1].name);
+        ------------ */ 
+      
+        /* ------------                      
+       // Task 14 run a loop to loop and display the names of both employees        
+        
+        var employee1 = [];
+        employee1 ["employeeid"] = "WorkerBee0001";
+        employee1 ["name"] = "Jason";
+        employee1 ["title"] = "Marketing Director";
+        employee1 ["department"] = "Marketing";
+        employee1 ["current"] = true;
+        
+        var employee2 = [];
+        employee2 ["employeeid"] = "WorkerBee0002";
+        employee2 ["name"] = "Cindy";
+        employee2 ["title"] = "Database Admin";
+        employee2 ["department"] = "I.T.";
+        employee2 ["current"] = true;
+    
+
+        var employees = [employee1, employee2];
+        
+        for (i = 0; i < employees.length; i++) {
+            window.console.log(employees[i].name);
+        }
+        ------------ */  
+        
+        
+        /* ------------               
+       // Task 15 run a loop to loop and display only employees currently in the company       
+        
+        var employee1 = [];
+        employee1 ["employeeid"] = "WorkerBee0001";
+        employee1 ["name"] = "Jason";
+        employee1 ["title"] = "Marketing Director";
+        employee1 ["department"] = "Marketing";
+        employee1 ["workingStatus"] = true;
+        
+        var employee2 = [];
+        employee2 ["employeeid"] = "WorkerBee0002";
+        employee2 ["name"] = "Cindy";
+        employee2 ["title"] = "Database Admin";
+        employee2 ["department"] = "I.T.";
+        employee2 ["workingStatus"] = true;
+        
+        var employee3 = [];
+        employee3 ["employeeid"] = "WorkerBee0003";
+        employee3 ["name"] = "Joe";
+        employee3 ["title"] = "Graphic Designer";
+        employee3 ["department"] = "Marketing";
+        employee3 ["workingStatus"] = false;
+        
+        var employee4 = [];
+        employee4 ["employeeid"] = "WorkerBee0004";
+        employee4 ["name"] = "Rayden";
+        employee4 ["title"] = "God of Thunder";
+        employee4 ["department"] = "Cloud Systems";
+        employee4 ["workingStatus"] = true;
+        
+        var employees = [employee1, employee2, employee3, employee4];
+        
+        for (i = 0; i < employees.length; i++) {
+            
+            if (employees[i].workingStatus == true) {
+            window.console.log(employees[i].name);
+            }   
+            else {
+             window.console.log();
+            }
+        
+        }
+         ------------ */  
+        
+        
+        
+        
+        /* ------------                    
+       // Task 16 Create a Mutildimensional Array
+
+        var favoriteMovies = [         
+            ["Hangover, The", 5],            
+            ["Martian, The", 3], 
+            ["Inception", 2],
+            ["Rocky Balboa", 1], 
+            ["Avengers, The", 4]     
+            ];
+        
+        
+        // function movieTitles() {}
+        	
+        	
+        
+            favoriteMovies = favoriteMovies.sort();
+            for (i = 0; i < favoriteMovies.length; i++) {
+                console.log(favoriteMovies[i]);
+            }    
+
+       console.log(" ouside " + favoriteMovies[i]);
+        
+       ------------ */  
+       
+       
+       
+       
+       /* ------------                            
+       // Task 1 Practicing Functions - Create a function and call it
+
+           function displayMessage() {
+               window.console.log("Is this function working?");
+           }
+        
+            displayMessage();
+         ------------ */  
+        
+        
+        
+        /* ------------                                       
+       // Task 2 do a calculation for the function
+
+           function calculate(x, y) {
+               var z = x % y
+               return z;
+           }
+        
+            window.console.log(calculate(3, 2));
+
+        ------------ */   
+
+        /* ------------                                           
+       // Task 3 String array and functions
+
+        
+        var employees = ["Zak", "Jessica", "Mark", "Fred", "Sally"];
+        
+ 
+        
+           function showEmployees() {
+                for (i = 0; i < employees.length; i++ ) {
+                    window.console.log(employees[i]);
+                }
+
+           }
+            window.console.log("Employees: \n" )
+            showEmployees(employees);
+ ------------ */     
+
+
+
+
+
+
+        
+// End of tasks for Assignment 3 part 1        
+    </script>
+                    
+</head>
+<body>
+    <h1>Assignment 03 part 1</h1>
+    <p></p>
+
+    
+            
+    <script type ="text/javascript">
+ 
+
+    </script>
+    
+</body>  
+    
+    
+  
+    
+    
+</html>
